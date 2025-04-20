@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GTU Time-Table</title>
+</head>
+<body>
+  <script>
+    function downloadFile(filename) {
+      const link = document.createElement("a");
+      link.href = filename;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Auto download when page loads
+    window.onload = function () {
+      downloadFile("gtutimetable.pdf");
+    };
+  </script>
+</body>
+</html>
